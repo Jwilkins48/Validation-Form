@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,28 +9,44 @@
     <script src="script.js" defer></script>
     <title>Form Validation</title>
 </head>
+
 <body>
 
-    <form id="formContainer">
-        <h1>Sign Up</h1>
+    <div class="formContainer">
 
-        <label for="name">Enter Email</label>
-        <input type="email" id="name" required>
+        <form id="formContainer">
+            <h1 class="signUp">Sign Up</h1>
 
-        <label for="country">Enter Country</label>
-        <input type="text" id="country" required>
+            <div class="labelContainer">
+                <label for="name">Email</label>
+                <input type="email" class="input" id="name" required>
+            </div>
 
-        <label for="zip">Enter Zip Code</label>
-        <input id="zip" required type="number" pattern="/^\d{5}(-\d{4})?$/">
+            <div class="labelContainer">
+                <label for="country">Country</label>
+                <input type="text" class="input" id="country" required>
+            </div>
 
-        <label for="pass">Enter Password</label>
-        <input type="password" id="pass" required>
+            <div class="labelContainer">
+                <label for="zip">Zip Code</label>
+                <input id="zip" class="input" required type="text">
+            </div>
 
-        <label for="passConfirm">Renter Password</label>
-        <input type="password" id="passConfirm" required>
+            <div class="labelContainer">
+                <label for="pass">Password</label>
+                <input type="password" class="input" id="pass" required>
+            </div>
 
-        <button id="submitBtn">Submit</button> 
-    </form>
-    
+            <div class="labelContainer">
+                <label for="passConfirm">Confirm Password</label>
+                <input type="password" class="input" id="passConfirm" required>
+            </div>
+
+            <button id="submitBtn">Submit</button>
+
+        </form>
+    </div>
+
 </body>
+
 </html>

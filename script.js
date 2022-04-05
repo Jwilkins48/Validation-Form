@@ -4,6 +4,7 @@ const zip = document.getElementById('zip');
 const pass = document.getElementById('pass');
 const passConfirm = document.getElementById('passConfirm');
 const submitBtn = document.getElementById('submitBtn');
+const input = document.querySelectorAll('input');
 
 const submitForm = () => {
     //Validate email
@@ -13,6 +14,7 @@ const submitForm = () => {
         formEmail.checkValidity();
     } else {
         formEmail.setCustomValidity('Enter a valid Email');
+        formEmail.style.border = 'solid 2px red'
     }
 
     //Validate Country
@@ -23,7 +25,8 @@ const submitForm = () => {
 
     country.addEventListener('invalid', () => {
         if (country.value === '') {
-            country.setCustomValidity('Please enter proper country');
+            country.setCustomValidity('Please enter country');
+            country.style.border = 'solid 2px red'
         }
     });
 
@@ -35,6 +38,7 @@ const submitForm = () => {
         zip.checkValidity();
     } else {
         zip.setCustomValidity('Enter a valid Zip Code');
+        zip.style.border = 'solid 2px red'
     }
 
     //Validate Password
@@ -45,16 +49,21 @@ const submitForm = () => {
         pass.checkValidity();
     } else {
         pass.setCustomValidity('Enter a valid password with at least 5 characters');
+        pass.style.border = 'solid 2px red'
     }
 
     //confirm Password
-    if (passConfirm.value === pass.value) {
-        pass.setCustomValidity('');
-        pass.checkValidity();
+    if (passConfirm.value === pass.value && passConfirm.value) {
+        passConfirm.setCustomValidity('');
+        passConfirm.checkValidity();
     } else if (passConfirm.value !== pass.value) {
         passConfirm.setCustomValidity('Passwords Must Match');
+    } else if (passConfirm.value === '') {
+        passConfirm.setCustomValidity('Enter Valid Password');
+        passConfirm.style.border = 'solid 2px red'
     } else {
         passConfirm.setCustomValidity('Enter Valid Password');
+        passConfirm.style.border = 'solid 2px red'
     }
 }
 

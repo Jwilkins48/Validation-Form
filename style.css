@@ -1,6 +1,72 @@
-/* input:valid {
-    border: 2px solid rgb(0, 0, 0);
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Pacifico&display=swap');
+*{
+    box-sizing: border-box;
 }
-input:invalid:required {
-    border: 2px solid red;
-} */
+body{
+    background-image: url('sky.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Comfortaa', cursive;
+    color: #10155c;
+}
+
+.formContainer{
+    border: solid 2px #1e2222;
+    background-color: #92bdee;
+    border-radius: 9px;
+    text-align: center;
+    width: 550px;
+    height: 650px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.signUp{
+    color: #ffffff;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem; 
+}
+
+.labelContainer{
+    display: flex;
+    flex-direction: column;
+    height: 85px;
+}
+.input{
+    width: 300px;
+    margin: auto;
+    height: 35px;
+    border-radius: 5px;
+    border: #8c9191 1px solid;
+}
+input:focus{
+    outline: none;
+}
+
+label{
+    font-size: 18px;
+}
+
+#submitBtn{
+    width: 118px;
+    height: 39px;
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1px solid #8c9191;
+    cursor: pointer;
+    font-family: 'Comfortaa', cursive;
+    background-color: #eaf7fd;
+    font-size: 15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+#submitBtn:hover{
+    background-color: #fd9f9f;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transform: scale(1.04);
+}
+#submitBtn:active{
+    transform: scale(.98);
+}
